@@ -4,7 +4,7 @@ A modern, responsive weather application built using **Next.js 14** and **Tailwi
 
 ## Demo
 
-![cover](./cover.png)
+![cover](/public/cover.png)
 
 You can try the game live [here](https://github.com/aryansoni-git/weather-app/)!
 

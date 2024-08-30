@@ -17,7 +17,7 @@ const getIcon = (weatherMain) => {
         Clouds: "./clouds.svg",
         Drizzle: "./drizzle.svg",
     };
-    return iconMap[weatherMain] || '/clear.svg';
+    return iconMap[weatherMain] || './clear.svg';
 };
 
 
@@ -66,7 +66,7 @@ export default function WeatherApp() {
                         value={`${weatherData.main.temp}°C`}
                         text={weatherData.name}
                         alt={weatherData.weather[0].description}
-                        src={getIcon(weatherData.weather[0].main) || './clear.svg'} // Icon directly from OpenWeatherMap
+                        src={getIcon(weatherData.weather[0].main)} // Icon directly from OpenWeatherMap
                     />
                     <div className="flex justify-around mt-5 sm:gap-20">
                         <Card isWind={false} value={`${weatherData.main.humidity}%`} />

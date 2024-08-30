@@ -20,6 +20,7 @@ const getIcon = (weatherMain) => {
     return iconMap[weatherMain] || '/clear.svg';
 };
 
+
 export default function WeatherApp() {
     const [city, setCity] = useState('jabalpur');
     const [weatherData, setWeatherData] = useState(null);
@@ -43,6 +44,7 @@ export default function WeatherApp() {
 
     useEffect(() => {
         fetchWeatherData();
+        console.log(API_KEY)
     }, []);
 
     const handleInputChange = (e) => { setCity(e.target.value); }
@@ -64,7 +66,7 @@ export default function WeatherApp() {
                         value={`${weatherData.main.temp}°C`}
                         text={weatherData.name}
                         alt={weatherData.weather[0].description}
-                        src={getIcon(weatherData.weather[0].main)} // Icon directly from OpenWeatherMap
+                        src={getIcon(weatherData.weather[0].main) || './clear.svg'} // Icon directly from OpenWeatherMap
                     />
                     <div className="flex justify-around mt-5 sm:gap-20">
                         <Card isWind={false} value={`${weatherData.main.humidity}%`} />

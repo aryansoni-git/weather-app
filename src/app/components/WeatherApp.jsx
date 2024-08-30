@@ -9,13 +9,13 @@ const API_KEY = process.env.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY;
 
 const getIcon = (weatherMain) => {
     const iconMap = {
-        Rain: "/rain.svg",
-        Mist: "/mist.svg",
-        Snow: "/snow.svg",
-        Wind: "/wind.svg",
-        Clear: "/clear.svg",
-        Clouds: "/clouds.svg",
-        Drizzle: "/drizzle.svg",
+        Rain: "./rain.svg",
+        Mist: "./mist.svg",
+        Snow: "./snow.svg",
+        Wind: "./wind.svg",
+        Clear: "./clear.svg",
+        Clouds: "./clouds.svg",
+        Drizzle: "./drizzle.svg",
     };
     return iconMap[weatherMain] || '/clear.svg';
 };

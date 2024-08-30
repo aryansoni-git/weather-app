@@ -11,7 +11,7 @@ export default function Search({ onInputChange, onSearchClick }) {
             />
             <button className="bg-white rounded-full p-2 outline-none border-none sm:p-4" onClick={onSearchClick}>
                 <Image
-                    src={`/search.svg`}
+                    src={`./search.svg`}
                     alt="search"
                     height={50}
                     width={50}

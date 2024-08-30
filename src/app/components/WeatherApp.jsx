@@ -44,7 +44,6 @@ export default function WeatherApp() {
 
     useEffect(() => {
         fetchWeatherData();
-        console.log(API_KEY)
     }, []);
 
     const handleInputChange = (e) => { setCity(e.target.value); }
